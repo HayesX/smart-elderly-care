@@ -1,0 +1,369 @@
+/* ============ 智慧助老平台 全局样式 ============ */
+/* CSS 变量定义 - 适老化规范 */
+:root {
+  /* 主色暖橙 */
+  --color-primary: #e8734a;
+  --color-primary-dark: #d65f37;
+  --color-primary-light: #fdf0eb;
+  --color-primary-hover: #f08560;
+
+  /* 危险色 - SOS */
+  --color-danger: #d93025;
+  --color-danger-dark: #b3261e;
+
+  /* 成功色 - 状态正常 */
+  --color-success: #2e7d32;
+  --color-success-light: #e8f5e9;
+
+  /* 警告色 */
+  --color-warning: #f9a825;
+
+  /* 中性色 */
+  --color-bg: #ffffff;
+  --color-bg-soft: #faf7f5;
+  --color-bg-card: #ffffff;
+  --color-text: #1f2329;
+  --color-text-secondary: #5f6368;
+  --color-text-light: #80868b;
+  --color-border: #e8e3e0;
+  --color-border-strong: #d8d3d0;
+  --color-divider: #f0ebe8;
+
+  /* 适老化字号 */
+  --fs-xs: 16px;
+  --fs-sm: 18px;
+  --fs-md: 20px;
+  --fs-lg: 24px;
+  --fs-xl: 28px;
+  --fs-2xl: 32px;
+  --fs-3xl: 40px;
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(31, 35, 41, 0.08);
+  --shadow-md: 0 4px 12px rgba(31, 35, 41, 0.10);
+  --shadow-lg: 0 8px 24px rgba(232, 115, 74, 0.18);
+
+  /* 间距 */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+    "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg-soft);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg-soft);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ============ 通用工具类 ============ */
+.app-shell {
+  min-height: 100vh;
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-bg-soft);
+  position: relative;
+}
+
+.family-shell {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-container {
+  padding: 24px 20px 48px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0 16px;
+  position: relative;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  font-size: 22px;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.back-btn:active {
+  background: var(--color-divider);
+}
+
+.page-title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  flex: 1;
+}
+
+/* 顶部切换视角按钮 */
+.view-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  min-height: 40px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.view-switcher:active {
+  background: var(--color-divider);
+}
+
+.view-switcher-icon {
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+/* 顶部状态栏(老人端) */
+.elder-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 20px 20px;
+  gap: 12px;
+}
+
+.greeting-block {
+  flex: 1;
+}
+
+.greeting-text {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.greeting-sub {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+/* 入口页样式 */
+.entry-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  background: linear-gradient(160deg, #fff5f0 0%, #ffffff 45%, #fdf0eb 100%);
+  text-align: center;
+}
+
+.entry-brand {
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #e8734a 0%, #f08560 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 32px rgba(232, 115, 74, 0.35);
+}
+
+.entry-title {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.entry-slogan {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  margin-bottom: 48px;
+  max-width: 480px;
+}
+
+.entry-actions {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry-divider {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-light);
+  font-size: var(--fs-sm);
+}
+
+.entry-divider::before,
+.entry-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.entry-entry-tag {
+  margin-top: 32px;
+  font-size: 15px;
+  color: var(--color-text-light);
+}
+
+/* 加载动画 */
+.loading-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.loading-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: dot-bounce 1.2s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes dot-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* 通用按钮组 */
+.action-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.action-row > * {
+  flex: 1;
+}
+
+/* 提示横幅 */
+.tip-banner {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: var(--fs-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* 状态标签 */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status-tag.ok {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.status-tag.warn {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.status-tag.bad {
+  background: #fdecea;
+  color: var(--color-danger);
+}
+
+/* 打印样式 - 报告导出 */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .app-shell, .family-shell {
+    max-width: 100%;
+    padding: 0;
+  }
+}

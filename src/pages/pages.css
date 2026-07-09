@@ -1,0 +1,1418 @@
+/* ============ 老人端 / 子女端 页面专用样式 ============ */
+
+/* ---------- 老人端首页天气卡 ---------- */
+.home-weather-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  margin: 0 20px 20px;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-weather-card .weather-icon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.home-weather-card .weather-info {
+  flex: 1;
+}
+
+.home-weather-card .weather-temp {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.home-weather-card .weather-meta {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.home-weather-card .weather-date {
+  font-size: 15px;
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+/* ---------- 拍照识药页 ---------- */
+.scan-page {
+  padding: 0 20px 48px;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 220px;
+  margin: 16px 0;
+  padding: 32px 20px;
+  border: 2.5px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  color: var(--color-text-secondary);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.upload-area:active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.upload-area .upload-icon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.upload-area .upload-hint {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.upload-area .upload-sub {
+  font-size: 15px;
+  color: var(--color-text-light);
+}
+
+.scan-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 220px;
+  margin: 16px 0;
+  padding: 32px 20px;
+  border: 2.5px dashed var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.scan-loading .scan-loading-text {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+.scan-loading .scan-loading-sub {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.result-card {
+  margin: 16px 0;
+}
+
+.result-card .med-name {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.result-card .med-category {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ---------- 用药计划页 ---------- */
+.plan-page {
+  padding: 0 20px 48px;
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.plan-item.taken {
+  border-left: 4px solid var(--color-success);
+}
+
+.plan-item.pending {
+  border-left: 4px solid var(--color-warning);
+}
+
+.plan-item.missed {
+  border-left: 4px solid var(--color-danger);
+}
+
+.plan-item .plan-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--color-primary-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.plan-item .plan-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-item .plan-name {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.plan-item .plan-meta {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.plan-item .plan-time {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.plan-item .plan-time-val {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.plan-item .plan-action {
+  margin-top: 6px;
+}
+
+/* ---------- 小助对话页 ---------- */
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 0px);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.chat-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8734a 0%, #f4a261 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(232, 115, 74, 0.3);
+  flex-shrink: 0;
+}
+
+.chat-header-info {
+  flex: 1;
+}
+
+.chat-header-name {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.online-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.18);
+}
+
+.chat-header-status {
+  font-size: 14px;
+  color: var(--color-success);
+  margin-top: 2px;
+}
+
+.mode-tag {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mode-tag.errand {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 16px 20px 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 320px;
+  max-height: calc(100vh - 280px);
+}
+
+.bubble-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.bubble-row.from-bot {
+  justify-content: flex-start;
+}
+
+.bubble-row.from-user {
+  justify-content: flex-end;
+}
+
+.bubble-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8734a 0%, #f4a261 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.bubble {
+  max-width: 78%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.bubble.from-bot {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-bottom-left-radius: 4px;
+}
+
+.bubble.from-user {
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-bottom-right-radius: 4px;
+}
+
+.bubble.alert {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.alert-banner-chat {
+  margin: 0 20px 8px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: #fdecea;
+  border: 1px solid #f5c5c0;
+  color: var(--color-danger-dark);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-footer {
+  padding: 12px 20px 20px;
+  background: #ffffff;
+  border-top: 1px solid var(--color-border);
+}
+
+.voice-big-btn {
+  width: 100%;
+  min-height: 72px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(232, 115, 74, 0.32);
+  transition: transform 0.08s ease;
+}
+
+.voice-big-btn:active {
+  transform: scale(0.99);
+}
+
+.voice-big-btn.listening {
+  background: var(--color-danger);
+  animation: voice-pulse 1.4s ease-in-out infinite;
+}
+
+.voice-big-btn .mic-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.input-toggle-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.input-toggle-row .elder-input-wrap {
+  flex: 1;
+}
+
+.input-toggle-btn {
+  flex-shrink: 0;
+  min-width: 56px;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border: 1.5px solid var(--color-primary);
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn {
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.send-btn:disabled {
+  opacity: 0.4;
+}
+
+.chat-tip {
+  font-size: 13px;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ---------- 叫车页 ---------- */
+.taxi-page {
+  padding: 0 20px 48px;
+}
+
+.addr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.addr-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 72px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+.addr-btn:active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.addr-btn .addr-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--color-primary-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.addr-btn .addr-text {
+  flex: 1;
+}
+
+.addr-btn .addr-label {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.addr-btn .addr-detail {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.confirm-banner {
+  margin: 16px 0;
+  padding: 20px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.confirm-banner .confirm-q {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+}
+
+.confirm-banner .confirm-sub {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.order-card {
+  margin: 16px 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.order-card .order-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-card .driver-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.order-card .driver-name {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.order-card .driver-rating {
+  font-size: 14px;
+  color: var(--color-warning);
+  margin-top: 2px;
+}
+
+.order-card .eta-block {
+  background: var(--color-success-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.order-card .eta-val {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--color-success);
+  line-height: 1.1;
+}
+
+.order-card .eta-text {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.order-card .plate {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: #e3f2fd;
+  color: #1565c0;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ---------- 天气详情页 ---------- */
+.weather-page {
+  padding: 0 20px 48px;
+}
+
+.weather-big-card {
+  margin: 16px 0;
+  padding: 28px 24px;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.weather-big-card .wb-label {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.weather-big-card .wb-icon {
+  font-size: 64px;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.weather-big-card .wb-temp {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  line-height: 1;
+}
+
+.weather-big-card .wb-temp .deg {
+  font-size: 32px;
+  vertical-align: top;
+}
+
+.weather-big-card .wb-desc {
+  font-size: var(--fs-md);
+  color: var(--color-text);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.weather-big-card .wb-meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.weather-tomorrow-card {
+  margin: 16px 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.weather-tomorrow-card .wt-icon {
+  font-size: 48px;
+}
+
+.weather-tomorrow-card .wt-info {
+  flex: 1;
+}
+
+.weather-tomorrow-card .wt-label {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.weather-tomorrow-card .wt-temp {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.weather-tomorrow-card .wt-desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.advice-card {
+  margin: 16px 0;
+  padding: 18px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.advice-card .advice-title {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.advice-card .advice-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ---------- SOS 页 ---------- */
+.sos-page {
+  padding: 24px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+}
+
+.sos-tip {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: var(--radius-sm);
+  color: #8d6e63;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sos-btn-big {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: #fff;
+  border: 8px solid #fff;
+  box-shadow: 0 0 0 4px var(--color-danger), 0 12px 32px rgba(217, 48, 37, 0.4);
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.sos-btn-big:active,
+.sos-btn-big.pressing {
+  transform: scale(0.96);
+  box-shadow: 0 0 0 4px var(--color-danger-dark), 0 8px 20px rgba(217, 48, 37, 0.55);
+}
+
+.sos-btn-big .sos-icon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.sos-progress-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sos-progress-ring circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.sos-status {
+  margin-top: 28px;
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-weight: 600;
+  min-height: 28px;
+}
+
+.sos-status.active {
+  color: var(--color-danger);
+}
+
+.sos-cancel {
+  margin-top: 32px;
+  min-width: 200px;
+}
+
+/* ---------- 子女端通用 ---------- */
+.family-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 24px;
+}
+
+.family-topbar .family-title {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.family-topbar .family-sub {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.section-title {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 24px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* 父母状态总览卡片 */
+.parent-status-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f0 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.parent-status-card .parent-name {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.parent-status-card .parent-sub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.status-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.status-cell {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 8px;
+  text-align: center;
+}
+
+.status-cell .sc-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.status-cell .sc-label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.status-cell .sc-value {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.status-cell.warn .sc-value {
+  color: var(--color-warning);
+}
+
+.status-cell.bad .sc-value {
+  color: var(--color-danger);
+}
+
+/* 四宫格入口 */
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.family-grid-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 120px;
+  padding: 20px 12px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.08s ease, box-shadow 0.15s ease;
+}
+
+.family-grid-cell:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-md);
+}
+
+.family-grid-cell .fgc-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--color-primary-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--color-primary-dark);
+}
+
+.family-grid-cell .fgc-title {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.family-grid-cell .fgc-sub {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* 用药日历网格 */
+.medicine-calendar {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.cal-cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 4px 2px;
+  border: 1px solid var(--color-border);
+}
+
+.cal-cell .cal-weekday {
+  color: var(--color-text-light);
+  font-size: 11px;
+}
+
+.cal-cell .cal-date {
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.cal-cell .cal-mark {
+  font-size: 14px;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.cal-cell.taken {
+  background: var(--color-success-light);
+  border-color: #c8e6c9;
+}
+
+.cal-cell.taken .cal-mark {
+  color: var(--color-success);
+}
+
+.cal-cell.missed {
+  background: #fdecea;
+  border-color: #f5c5c0;
+}
+
+.cal-cell.missed .cal-mark {
+  color: var(--color-danger);
+}
+
+.cal-cell.partial {
+  background: #fff8e1;
+  border-color: #ffe082;
+}
+
+.cal-cell.partial .cal-mark {
+  color: var(--color-warning);
+}
+
+.cal-cell.today {
+  border: 2px solid var(--color-primary);
+}
+
+.calendar-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  flex-wrap: wrap;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* 今日用药列表(子女端) */
+.today-med-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.today-med-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.today-med-item.missed {
+  background: #fdecea;
+  border-color: #f5c5c0;
+}
+
+.today-med-item.pending {
+  background: #fff8e1;
+  border-color: #ffe082;
+}
+
+.today-med-item .tm-time {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  min-width: 56px;
+}
+
+.today-med-item .tm-name {
+  flex: 1;
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+.today-med-item .tm-status {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.today-med-item.taken .tm-status {
+  color: var(--color-success);
+}
+
+.today-med-item.missed .tm-status {
+  color: var(--color-danger);
+}
+
+.today-med-item.pending .tm-status {
+  color: var(--color-warning);
+}
+
+/* 安全时间线 */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 16px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-warning);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--color-warning);
+}
+
+.timeline-item.danger::before {
+  background: var(--color-danger);
+  box-shadow: 0 0 0 2px var(--color-danger);
+}
+
+.timeline-item.resolved::before {
+  background: var(--color-success);
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+.alert-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-card.unresolved {
+  border-left: 4px solid var(--color-warning);
+}
+
+.alert-card .alert-type {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.alert-card .alert-time {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 8px;
+}
+
+.alert-card .alert-desc {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.alert-card .alert-suggestion {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-soft);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.call-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.call-back-btn:active {
+  background: var(--color-primary-dark);
+}
+
+/* 情绪曲线 */
+.mood-chart-wrap {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 16px;
+  margin-bottom: 16px;
+}
+
+.mood-chart-svg {
+  width: 100%;
+  height: 200px;
+}
+
+.mood-axis-label {
+  font-size: 12px;
+  fill: var(--color-text-light);
+}
+
+.mood-day-label {
+  font-size: 12px;
+  fill: var(--color-text-secondary);
+}
+
+.mood-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.mood-keyword {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mood-keyword .kw-count {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.mood-summary {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* 报告预览 */
+.report-section {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.report-section h3 {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-section p {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.report-section .report-stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.report-section .report-stat {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-sm);
+}
+
+.report-section .report-stat .rs-num {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.report-section .report-stat .rs-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+/* 通用底部按钮 */
+.bottom-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 操作反馈 toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(31, 35, 41, 0.92);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast.success {
+  background: var(--color-success);
+}
+
+.toast.danger {
+  background: var(--color-danger);
+}
+
+/* 子女端顶部返回入口 */
+.family-back-home {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-light);
+}
+
+/* SOS 倒计时弹层 */
+.sos-countdown-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(217, 48, 37, 0.18);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sos-confirm-box {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  max-width: 320px;
+  width: calc(100% - 48px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sos-confirm-box .scb-title {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--color-danger);
+  margin-bottom: 8px;
+}
+
+.sos-confirm-box .scb-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.sos-confirm-box .scb-countdown {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--color-danger);
+  margin: 8px 0 16px;
+  line-height: 1;
+}
+
+.sos-called-banner {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fdecea;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-danger);
+  color: var(--color-danger-dark);
+  font-size: 15px;
+  line-height: 1.6;
+}

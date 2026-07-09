@@ -1,0 +1,367 @@
+/* ============ 适老化组件库样式 ============ */
+
+/* ---------- ElderButton ---------- */
+.elder-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.08s ease, opacity 0.15s ease, background-color 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.elder-btn:active {
+  transform: scale(0.98);
+  opacity: 0.88;
+}
+
+.elder-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 尺寸 - 满足适老化: ≥48px */
+.elder-btn.size-md {
+  min-height: 48px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.elder-btn.size-lg {
+  min-height: 56px;
+  padding: 0 24px;
+  font-size: 20px;
+}
+
+.elder-btn.size-xl {
+  min-height: 64px;
+  padding: 0 32px;
+  font-size: 22px;
+}
+
+/* 变体 */
+.elder-btn.variant-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(232, 115, 74, 0.30);
+}
+
+.elder-btn.variant-primary:active {
+  background: var(--color-primary-dark);
+}
+
+.elder-btn.variant-secondary {
+  background: #ffffff;
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+}
+
+.elder-btn.variant-secondary:active {
+  background: var(--color-primary-light);
+}
+
+.elder-btn.variant-danger {
+  background: var(--color-danger);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(217, 48, 37, 0.30);
+}
+
+.elder-btn.variant-danger:active {
+  background: var(--color-danger-dark);
+}
+
+.elder-btn.variant-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.elder-btn.is-full {
+  width: 100%;
+}
+
+.elder-btn-icon {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* ---------- ElderCard ---------- */
+.elder-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md);
+  overflow: hidden;
+}
+
+.elder-card.accent-left {
+  border-left: 4px solid var(--color-primary);
+}
+
+.elder-card-title {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.elder-card-content {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.elder-card-content > p + p {
+  margin-top: 6px;
+}
+
+.elder-card-footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-divider);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 卡片内字段列表 */
+.field-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: var(--fs-sm);
+}
+
+.field-row .field-label {
+  flex-shrink: 0;
+  width: 92px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.field-row .field-value {
+  flex: 1;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.field-row .field-value.large {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+}
+
+/* ---------- ElderInput ---------- */
+.elder-input-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+}
+
+.elder-input {
+  flex: 1;
+  min-height: 48px;
+  padding: 0 16px;
+  font-size: var(--fs-sm);
+  background: #ffffff;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.elder-input::placeholder {
+  color: var(--color-text-light);
+}
+
+.elder-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(232, 115, 74, 0.15);
+}
+
+.elder-input-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.voice-btn {
+  flex-shrink: 0;
+  width: 56px;
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 1.5px solid var(--color-primary);
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+.voice-btn:active {
+  transform: scale(0.95);
+}
+
+.voice-btn.listening {
+  background: var(--color-primary);
+  color: #fff;
+  animation: voice-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes voice-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 115, 74, 0.5); }
+  50% { box-shadow: 0 0 0 10px rgba(232, 115, 74, 0); }
+}
+
+/* ---------- 顶部栏(老人端通用) ---------- */
+.elder-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 20px 16px;
+  gap: 12px;
+}
+
+.weather-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin: 0 20px 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.weather-mini-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.weather-mini-temp {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.weather-mini-desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+/* 五大入口大按钮 */
+.elder-entry-list {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.elder-entry-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: transform 0.08s ease, box-shadow 0.15s ease;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.elder-entry-btn:active {
+  transform: scale(0.99);
+  box-shadow: var(--shadow-md);
+}
+
+.elder-entry-btn .entry-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--color-primary-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--color-primary-dark);
+}
+
+.elder-entry-btn .entry-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.elder-entry-btn .entry-title-text {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.elder-entry-btn .entry-sub {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.elder-entry-btn .entry-arrow {
+  flex-shrink: 0;
+  color: var(--color-text-light);
+  font-size: 22px;
+}
+
+/* SOS 入口按钮(红色) */
+.elder-entry-btn.is-sos {
+  background: var(--color-danger);
+  border-color: var(--color-danger-dark);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(217, 48, 37, 0.30);
+}
+
+.elder-entry-btn.is-sos .entry-icon {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.elder-entry-btn.is-sos .entry-title-text,
+.elder-entry-btn.is-sos .entry-sub,
+.elder-entry-btn.is-sos .entry-arrow {
+  color: #fff;
+}
+
+.elder-entry-btn.is-sos .entry-sub {
+  opacity: 0.9;
+}
